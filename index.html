@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Random Quote</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body id="app" class="d-flex justify-content-center align-items-center">
+    <main class="quote container w-100 w-sm-75 p-5 fs-3 d-flex flex-column gap-2">
+        <div class="h-25 quote--button d-flex justify-content-center align-items-end">
+            <button @click="generateRandomNum" id="generate-quote" type="button" class="btn fs-3">Generate Quote</button>
+
+        </div>
+        <div class="quote--text fw-bold">
+            {{quotesList[randomNumQuote].quote}}    
+        </div>
+        <div class="quote--author text-end fw-bold">
+            {{quotesList[randomNumQuote].author}}
+        </div>
+    </main>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+</body>
+
+</html>
